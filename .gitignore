@@ -1,0 +1,7 @@
+/build/
+*.exe
+*.o
+user_data.txt
+data.txt
+.DS_Store
+Thumbs.db

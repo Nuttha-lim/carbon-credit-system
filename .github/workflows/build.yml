@@ -1,0 +1,20 @@
+name: C build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile with GCC
+        run: |
+          mkdir -p build
+          gcc -std=c11 -Wall -Wextra -Wpedantic login.c -o build/carbon-credit
