@@ -1,5 +1,7 @@
 # Carbon Credit Trading System
 
+[![C build](https://github.com/Nuttha-lim/carbon-credit-system/actions/workflows/build.yml/badge.svg)](https://github.com/Nuttha-lim/carbon-credit-system/actions/workflows/build.yml)
+
 A C console program for registering users and managing carbon-credit project listings. Sellers can add and edit projects, while buyers can search listings by project type. User and project records are stored in local text files.
 
 ## My contribution
