@@ -1,4 +1,4 @@
-name: C build
+name: C checks
 
 on:
   push:
@@ -10,11 +10,14 @@ permissions:
   contents: read
 
 jobs:
-  compile:
+  test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        sanitize: ['0', '1']
+    env:
+      SANITIZE: ${{ matrix.sanitize }}
     steps:
       - uses: actions/checkout@v4
-      - name: Compile with GCC
-        run: |
-          mkdir -p build
-          gcc -std=c11 -Wall -Wextra -Wpedantic login.c -o build/carbon-credit
+      - name: Build and run regression checks
+        run: python3 tests/run_tests.py

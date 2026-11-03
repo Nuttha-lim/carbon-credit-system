@@ -1,0 +1,3 @@
+seller demo123 school hospital pet 70.00 0.00 seller@example.test
+buyer demo123 school hospital pet 0.00 1000.00 buyer@example.test
+observer demo123 school hospital pet 0.00 1000.00 observer@example.test

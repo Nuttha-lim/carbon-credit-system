@@ -3,5 +3,10 @@
 *.o
 user_data.txt
 data.txt
+users.txt
+projects.txt
+transaction.txt
+*.txt.tmp
+__pycache__/
 .DS_Store
 Thumbs.db
